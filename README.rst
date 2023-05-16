@@ -209,6 +209,11 @@ Check HSTS list
 DNS lookup
 ----------
 
+* As soon as you hit Enter, your browser initiates a DNS (Domain Name System) request.
+* It sends a query to a DNS resolver or your local DNS cache, requesting the 
+  IP address associated with the domain name "www.google.com". 
+* The resolver checks its cache, and if the IP address is not found, it recursively 
+  queries the authoritative DNS servers until it obtains the IP address.
 * Browser checks if the domain is in its cache. (to see the DNS Cache in
   Chrome, go to `chrome://net-internals/#dns <chrome://net-internals/#dns>`_).
 * If not found, the browser calls ``gethostbyname`` library function (varies by
